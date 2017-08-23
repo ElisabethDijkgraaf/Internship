@@ -5,25 +5,17 @@ $(document).ready(function () {
 	$(".restaurant1").click(function () {
 		$(".restaurantcontent").slideToggle();
 	});
-    
-    $(".shop1").click(function () {
-		$(".shopcontent").slideToggle();
-	});
 
     $(".cafe1").click(function () {
 		$(".cafecontent").slideToggle();
 	});
     
-    $(".education1").click(function () {
-		$(".educationcontent").slideToggle();
+    $(".others1").click(function () {
+		$(".otherscontent").slideToggle();
 	});
 // numbers - content
     $(".counter1").click(function () {
 		$(".restaurantcontent").slideToggle();
-	});
-    
-     $(".counter2").click(function () {
-		$(".shopcontent").slideToggle();
 	});
     
      $(".counter3").click(function () {
@@ -31,7 +23,7 @@ $(document).ready(function () {
 	});
     
      $(".counter4").click(function () {
-		$(".educationcontent").slideToggle();
+		$(".ohterscontent").slideToggle();
 	});
 });
 
@@ -92,10 +84,47 @@ function initMap() {
           map: map
         });
             
-            var marker = new google.maps.Marker({
+        var message = ['45 Shuttleworth road, SW11 3DH'];
+    for (var i = 0; i < message.length; ++i){
+          var marker = new google.maps.Marker({
           position: myhouse,
           map: map
         });
-    
-    
-      }
+        attachmessage(marker, message[i]);
+    }
+}
+
+function attachmessage(marker, message) {
+  var infowindow = new google.maps.InfoWindow({
+    content: message
+  });
+
+  marker.addListener('click', function() {
+    infowindow.open(marker.get('map'), marker);
+  });
+}
+
+
+// NAV
+
+(function($) {          
+    $(document).ready(function(){ 
+
+        var $win = $(window);
+        var winH = $win.height(); // Get the window height.
+        $(window).scroll(function(){                          
+            if ($(this).scrollTop() > winH) {
+                $('#navbar').fadeIn(500);
+            } else {
+                $('#navbar').fadeOut(500);
+            }
+        }).on("resize", function(){ // If the user resizes the window
+       winH = $(this).height(); // you'll need the new height value
+       });
+
+    });
+})(jQuery);
+
+//$(".navbar-toggle").click(function () {
+//        $(".javanav").slideToggle();
+//    });

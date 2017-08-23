@@ -19,13 +19,48 @@ body{
     margin: 0;
     padding: 0;
     height: 100%;
+    font-family: helvetiva;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/header.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+nav{
+    background-color: white;
+    font-family: helvetica;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.green-c{
+  color: #82d3c2!important;
+}
+.blue{
+  background-color:rgba(135, 173, 229, 0.6);
+}
+
 .container{
-    background-color: lightblue;
     max-width: 1200px;
     min-height: 100%;
     position: relative;
-    
+}
+h1 {
+    color: white;
+    font-size: 55px;
+    padding: 2%;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+h2{
+  color:white;
+}
+
+section{
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 /*footer*/
@@ -35,7 +70,6 @@ footer {
     width: 100%; 
     padding: 5px 0px;
     text-align: right;
-    position: absolute;
     left: 0px;
     bottom: 0px;
 }
@@ -45,32 +79,38 @@ footer {
 li{
     font-size: 1.5em;
 }
+
 .navbar-brand{
     width: 30%;
 }
+
 .navbar{
-    background-color: lightblue;
+    display: block;
+    display: none;
     border-bottom: none;
 }
 
+.brand {
+    width: 27%;
+    margin-top: 26px;
+}
+
+
 /*Home*/
 
-h1{
-    color: white;
-    font-size: 40px;
-    padding: 2%;
+.test{
+  margin-top: 20vh;
 }
 
 #h1photo {
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-image: url('../img/apple-pixabay.jpg');
+/*  background-size: cover;*/
+/*  background-position: center;*/
+/*  background-image: url('../img/header.jpg');*/
   color: white;
   height: 100vh; 
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
+/*  background-repeat: no-repeat;*/
+/*  background-attachment: fixed;*/
 }
 
 .introduction{
@@ -172,21 +212,13 @@ h1{
     transition-delay: 0.2s;
 }
 
-
-/*Last pictures*/
-
-.TwoPictures{
-    padding-top: 2%;
-    padding-bottom: 2%;
-}
-
 /*Last button*/
 .GoCompanies{
-    padding: 1%;
+    padding: 3%;
     background-color: dimgray;
     border-radius: 50px;
-    font-size: 13px;
-    margin-top: 1%;
+    font-size: 20px;
+    margin-top: 5%;
     margin-bottom: 50px;
 }
 
@@ -203,97 +235,63 @@ a:link, a:visited {
 
 .restaurantcontent{
 	display: none;
-	width: 85%;
+	width: 70%;
     margin: auto;
-	background-color: lightblue;
+	background-color: #87ade5;
 }
 .restaurant1 {
 	list-style: none;
     text-align: center;
 	font-size: 1.5em;
     padding: 2em;
+    margin-top: 2%;
 }
 
-.shopcontent{
-	display: none;
-	width: 85%;
-    margin: auto;
-	background-color: lightblue;
-     padding-bottom: 40px;
-}
-.shop1 {
-	list-style: none;
-    text-align: center;
-	font-size: 1.5em;
-    padding: 2em;
-}
 .cafecontent{
 	display: none;
-	width: 85%;
+	width: 70%;
+	background-color: #87ade5;
+    padding-top: 3%; 
+    padding-bottom: 3%;
     margin: auto;
-	background-color: lightblue;
-    
 }
 .cafe1 {
 	list-style: none;
     text-align: center;
 	font-size: 1.5em;
     padding: 2em;
+    margin-top: 2%;
     
 }
-.educationcontent{
+.otherscontent{
 	display: none;
-	width: 85%;
+	width: 70%;
     margin: auto;
-	background-color: lightblue;
-    padding-bottom: 60px;
+	background-color: #87ade5;
+    padding-top: 3%; 
+    padding-bottom: 3%;
+    
 }
-.education1 {
+.others1 {
 	list-style: none;
     text-align: center;
 	font-size: 1.5em;
     padding: 2em;
-    padding-bottom: 40px;
+    margin-top: 2%;
 }
 
 .gray{
     background-color: dimgray;
-    color: darkorange;
-}
-.blue{ 
-    background-color: lightblue;
-    color: darkorange;
+    color: #87ade5;
+    margin-top: 2%;
 }
 
 .counter {
     list-style: none;
     text-align: center;
 	font-size: 1.5em;
-    padding: 2em;
- 
-}
-
-/*CONTENT EDUCATION*/
-
-.one{
-    background-color: darkorange;
-    padding: 5%;
-    
-}
-.two{
-    background-color: dimgray;
-    padding: 5%;
-    
-}
-.three{
-    background-color: darkorange;
-    padding: 5%;
-    
-}
-.four{
-    background-color: lightpink;
-    padding: 5%;
-    
+    padding: 2em; 
+    margin-top: 2%;
 }
 
 /*Boxes*/
@@ -355,8 +353,10 @@ a:link, a:visited {
 /* Content Google Maps */
     
 #map{
+    
     width: 100%;
-    height: 400px;
+    height: 600px;
+    margin-bottom:5em;
 }
 
 
